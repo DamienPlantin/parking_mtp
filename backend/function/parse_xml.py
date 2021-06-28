@@ -1,7 +1,6 @@
 import logging
 import urllib.request
 import xml.etree.ElementTree as ET
-# from dict_url import dict_url
 
 
 def xml_parse_url(url):
