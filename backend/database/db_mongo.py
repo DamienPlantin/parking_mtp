@@ -5,6 +5,7 @@ from pymongo import MongoClient
 from backend.function.parse_xml import create_dict
 from backend.function.dict_url import dict_url
 
+
 HOST = os.environ["HOST_MONGO_DB"]
 PASSWORD = os.environ["PASSWORD_MONGO_DB"]
 SERVER = os.environ["SERVER_MONGO_DB"]
@@ -28,7 +29,7 @@ def connect_db(host, password, server):
 def insert_rows(database):
   """This function insert rows in the database
   mongodatabase
-  
+
   :returns: inserts rows in the database
   :rtype: rows in database
   """
