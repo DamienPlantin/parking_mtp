@@ -10,20 +10,10 @@ from backend.database.db_mongo import HOST, PASSWORD, SERVER
 MAIN = Blueprint('main', __name__)
 SCHED = BackgroundScheduler(daemon=True)
 SCHED.start()
-SCHED.add_job(main_db, 'interval', seconds=59)
+SCHED.add_job(main_db, 'interval', seconds=179)
 
 
 @MAIN.route('/')
-def index():
-    """Returns page login.html
-
-    :returns: page login.html
-    :rtype: html
-    """
-    return render_template('index.html')
-
-
-@MAIN.route('/parking')
 def parking():
     """This function return parkings in jinja2 in the front
 
