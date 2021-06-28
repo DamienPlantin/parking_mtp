@@ -1,5 +1,2 @@
 build:
-  docker:
-    web: Dockerfile
-  run:
-    sh Script.sh
+    web: sh Script.sh
