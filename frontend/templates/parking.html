@@ -4,31 +4,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-  <meta http-equiv="refresh" content="59"/>
-  <link rel="stylesheet" href="https://bootswatch.com/5/spacelab/bootstrap.min.css" />
+  <meta http-equiv="refresh" content="359"/>
+  <link rel="stylesheet" href="./static/bootstrap.min.css" />
   <link rel="stylesheet" type= "text/css" href= './static/style.css'/>
   <title>Parking Montpellier</title>
  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav me-auto">
-          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="https://github.com/mancid/parking_mtp.git/" target="_blank"><img id="github" src="./static/github.png"></img></a>
+          <a class="nav-link" href="https://mancid.github.io/data_parking_montpellier_login/" target="_blank"><img id="sphinx" src="./static/sphinxheader.png"></img></a>
+
           </nav>
 </head>
 
 <body>
+  <div class="jumbotron">
+    <div class="logo" style="display: block; text-align: center;">
+    <img id="logo" src="./static/logo.png"></div>
+    <p class="lead">Nombres de places disponibles en temps réel des parkings souterrains de Montpellier</p>
+    <hr class="my-4">
+        <p class="secondary">Cliquez sur Google Maps pour avoir directement l'itinéraire vers le parking choisi.</p></div>
     <div>
     <span class="badge bg-primary rounded-pill">Actualis&eacute; &agrave; : {{now}}</span></div>
 <!-- <div><img class="fit-picture"
      src="./parking_logo.png"></div> -->
    {% for parking, value in parkings.items() %}
-  <span class="badge bg-primary">{{ parking }}
+  <span class="badge bg-primary">{{ parking.replace('_',' ') }}
   <div class="progress">
-  <div class="progress-bar bg-success" role="progressbar" style="width: {{(value.get('Total') - value.get('Free'))/value.get('Total') * 100}}%;" aria-valuenow={{value.get('Free')}} aria-valuemin="0" aria-valuemax={{value.get('Total')}}></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: {{(value[0].get('Total') - value[0].get('Free'))/value[0].get('Total') * 100}}%;" aria-valuenow={{value[0].get('Free')}} aria-valuemin="0" aria-valuemax={{value[0].get('Total')}}></div>
   </div>
-  <span class="badge bg-danger" id="occupe">Places prises : {{value.get('Total') - value.get('Free')}}</span>
-  <span class="badge bg-success" id="dispo">Places disponibles : {{value.get('Free')}}</span>
-  </span>
+  <span class="badge bg-danger" id="occupe">Places prises : {{value[0].get('Total') - value[0].get('Free')}}</span>
+  <span class="badge bg-success" id="dispo">Places disponibles : {{value[0].get('Free')}}</span>
+  <div>
+  <a href="https://www.google.com/maps/dir//{{value[1].replace(' ', '+')}})" target="_blank"><img id="google-maps"  src="./static/google_maps.png"></a></div>
+</span>
  {% endfor %}
 </body>
-</html>
+<footer>        
+  
+
+<figure>
+  <blockquote class="blockquote">
+    <p class="mb-0">© MANCID 2021</p>
+  
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Source : <cite title="Source Title"><a href="https://data.montpellier3m.fr/dataset/disponibilite-des-places-dans-les-parkings-de-montpellier-mediterranee-metropole" target="_blank">Ville de Montpellier ❤️</a></cite>
+  </figcaption>
+</figure>
+</footer>

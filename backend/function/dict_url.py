@@ -19,6 +19,8 @@ def dict_url(conf):
   for simple_url in list(url["url"]):
     parking = simple_url.capitalize()
     link = url["url"][simple_url]
-    res[parking] = link
+    adress = url["adress"][simple_url]
+    res[parking] = link, adress
   logging.info("this is the dict with keys and urls %s", res)
   return res
+

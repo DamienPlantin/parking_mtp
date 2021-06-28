@@ -1,6 +1,7 @@
 import logging
 import urllib.request
 import xml.etree.ElementTree as ET
+# from dict_url import dict_url
 
 
 def xml_parse_url(url):
@@ -40,5 +41,5 @@ def create_dict(dict_url):
   """
   mydict = {}
   for parking, url in dict_url.items():
-    mydict[parking] = xml_parse_url(url)
+    mydict[parking] = xml_parse_url(url[0]), url[1]
   return mydict
