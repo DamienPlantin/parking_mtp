@@ -23,5 +23,3 @@ def dict_url(conf):
     res[parking] = link, adress
   logging.info("this is the dict with keys and urls %s", res)
   return res
-
-print(dict_url("tests/url_test.ini"))
