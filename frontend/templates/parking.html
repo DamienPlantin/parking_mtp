@@ -27,8 +27,6 @@
         <p class="secondary">Cliquez sur Google Maps pour avoir directement l'itinéraire vers le parking choisi.</p></div>
     <div>
     <span class="badge bg-primary rounded-pill">Actualis&eacute; &agrave; : {{now}}</span></div>
-<!-- <div><img class="fit-picture"
-     src="./parking_logo.png"></div> -->
    {% for parking, value in parkings.items() %}
   <span class="badge bg-primary">{{ parking.replace('_',' ') }}
   <div class="progress">

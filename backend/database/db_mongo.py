@@ -20,7 +20,7 @@ def connect_db(host, password, server):
   client = MongoClient(f"mongodb+srv://{host}:{password}@{server}?ssl=true&"\
                        "ssl_cert_reqs=CERT_NONE")
   logging.info(" %s client : ", client)
-  conn = client.test
+  conn = client.parking
   logging.info(" your database : %s", conn)
   database = conn["Parking"]
   return database
