@@ -9,9 +9,12 @@ from backend.function.parse_xml import xml_parse_url, create_dict
 class BasicTest(unittest.TestCase):
 
     def test_dict_url(self):
-        res = {'Antigone': 'https://data.montpellier3m.fr/sites/default/files/ressources/FR_MTP_ANTI.xml',
-               'Pitot': 'https://data.montpellier3m.fr/sites/default/files/ressources/FR_MTP_PITO.xml',
-               'Vicarello': 'https://data.montpellier3m.fr/sites/default/files/ressources/FR_CAS_VICA.xml'}
+        res = {'Antigone': ('https://data.montpellier3m.fr/sites/default/files/ressources/FR_MTP_ANTI.xml',
+                'Parking Antigone, Boulevard Antigone, 34000 Montpellier'),
+                'Pitot': ('https://data.montpellier3m.fr/sites/default/files/ressources/FR_MTP_PITO.xml',
+                'Parking pitot, 7 Rue du Carré du Roi, 34000 Montpellier'),
+                'Vicarello': ('https://data.montpellier3m.fr/sites/default/files/ressources/FR_CAS_VICA.xml',
+                'Parking le vicarello, Rue de la Crouzette, 34170 Castelnau-le-Lez')}
         self.assertIsInstance(dict_url("tests/url_test.ini"), dict)
         self.assertEqual(dict_url("tests/url_test.ini"), res)
 
