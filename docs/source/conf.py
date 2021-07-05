@@ -34,11 +34,10 @@ release = '1'
 extensions = [
     'sphinx.ext.napoleon',
     "sphinx_rtd_theme",
-    "recommonmark",
-    "myst_parser"
+    "recommonmark"
 ]
 
-# source_suffix = ['.rst', '.md']
+source_suffix = ['.rst', '.md']
 napoleon_google_docstring = False
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
