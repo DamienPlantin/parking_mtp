@@ -13,9 +13,9 @@ def create_app(config_name):
   :rtype: Flask
   """
   app = Flask(__name__,
-  template_folder='../frontend/templates/',
-  static_folder='../frontend/static')
-  app.config['SECRET_KEY'] = os.environ["SECRET_KEY"]
+  template_folder="../frontend/templates/",
+  static_folder="../frontend/static")
+  app.config["SECRET_KEY"] = os.environ["SECRET_KEY"]
   # blueprint for non-auth parts of app
   app.register_blueprint(main_blueprint)
   # app.run(debug=True)
