@@ -1,5 +1,6 @@
 body{
-  background-color:#dfdfdf;
+  background-image : url(../static/background.jpg);
+  background-size : 200%;
 }
 
 .navbar-item{
@@ -37,7 +38,7 @@ body{
   }
 
 #google-maps{
-  width: 130px;
+  width: 80px;
   border-radius:3em;
   background-color: #ebedf1e6;
   border: 2px solid #fff !important;
@@ -81,16 +82,14 @@ body{
 }
 
 .badge.bg-primary {
-
-    margin-top: 50px;
-    margin-left: 80px;
     line-height: 3;
     font-size: 1.2em;
     border-radius: 5em;
     border: 2px solid;
     border-color: #fff !important;
-    color: #525564;
-    background-color: #ebedf1e6 !important;
+    color: #ffffff;
+    background-color: #12264ee6 !important;
+    display: block ruby;
 
 }
 
@@ -118,3 +117,15 @@ body{
   min-width: 30px;
   display: block;
 }
+
+#name_parking{
+  font-size:  1em;
+margin: 7px;
+opacity: 80%;
+background-color: #031d38;
+}
+
+#free_place{
+font-size: 1em !important;
+margin-top: 5px;
+margin-right: 200px;}

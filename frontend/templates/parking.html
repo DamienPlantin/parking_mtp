@@ -20,7 +20,7 @@
 
 <body>
   <div class="jumbotron">
-    <div class="logo" style="display: block; text-align: center;">
+    <div class="logo" style="display: block; text-align: left;">
     <img id="logo" src="./static/logo.png"></div>
     <p class="lead">Nombres de places disponibles en temps réel des parkings souterrains de Montpellier</p>
     <hr class="my-4">
@@ -28,15 +28,17 @@
     <div>
     <span class="badge bg-primary rounded-pill">Actualis&eacute; &agrave; : {{now}}</span></div>
    {% for parking, value in parkings.items() %}
-  <span class="badge bg-primary">{{ parking.replace('_',' ') }}
-  <div class="progress">
-  <div class="progress-bar bg-success" role="progressbar" style="width: {{(value[0].get('Total') - value[0].get('Free'))/value[0].get('Total') * 100}}%;" aria-valuenow={{value[0].get('Free')}} aria-valuemin="0" aria-valuemax={{value[0].get('Total')}}></div>
-  </div>
-  <span class="badge bg-danger" id="occupe">Places prises : {{value[0].get('Total') - value[0].get('Free')}}</span>
-  <span class="badge bg-success" id="dispo">Places disponibles : {{value[0].get('Free')}}</span>
-  <div>
+   
+   <ul class="list-group">
+    <li id="name_parking" class="list-group-item d-flex justify-content-between align-items-center"><h1>
+      {{ parking.replace( '_', ' ')}}
+    </h1>
+    <div class="progress">
+<div class="progress-bar bg-success" role="progressbar" style="width:{{(value[0].get('Total') - value[0].get('Free'))/value[0].get('Total') * 100}}%;" aria-valuenow={{value[0].get('Free')}} aria-valuemin="0" aria-valuemax={{value[0].get('Total')}}></div>
+    </div>
+      <span id="free_place" class="badge bg-primary rounded-pill">{{value[0].get('Free')}}</span>
   <a href="https://www.google.com/maps/dir//{{value[1].replace(' ', '+')}})" target="_blank"><img id="google-maps"  src="./static/google_maps.png"></a></div>
-</span>
+</span></li>
  {% endfor %}
 </body>
 <footer>        
