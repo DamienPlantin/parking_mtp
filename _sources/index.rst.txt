@@ -13,38 +13,6 @@ Welcome to Mancid parking's documentation!
 
    modules
    ../README.md
-      .. image:: docs/source/images/python.png
-         :height: 65px
-         :width: 65px
-         :alt: image
-      .. image:: docs/source/images/flask.png
-         :height: 65px
-         :width: 87px
-         :alt: image
-      .. image:: docs/source/images/mongodb.png
-         :height: 65px
-         :width: 63
-         :alt: image
-      .. image:: docs/source/images/docker.png
-         :height: 65px
-         :width: 65px
-         :alt: image
-      .. image:: docs/source/images/heroku.png
-         :height: 65px
-         :width: 195px
-         :alt: image
-      .. image:: docs/source/images/mancid.png
-         :height: 432px
-         :width: 432px
-         :alt: image
-      .. image:: docs/source/images/parking-3.png
-         :height: 240px
-         :width: 240px
-         :alt: image
-      .. image:: docs/source/images/mtp.jpg
-         :height: 240px
-         :width: 319px
-         :alt: image
 
 
 Indices and tables
