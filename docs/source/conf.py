@@ -38,11 +38,7 @@ extensions = [
     "myst_parser"
 ]
 
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.txt': 'markdown',
-    '.md': 'markdown',
-}
+source_suffix = ['.rst', '.md']
 napoleon_google_docstring = False
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
