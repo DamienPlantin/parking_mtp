@@ -3,6 +3,7 @@ pytest
 apscheduler
 flask
 flask-cors
+flask-sqlalchemy
 pymongo[tls, srv]
 jinja2
 gunicorn
