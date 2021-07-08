@@ -15,7 +15,6 @@ Welcome to Mancid parking's documentation!
    ../README.md
 
 
-
 Indices and tables
 ==================
 

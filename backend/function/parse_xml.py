@@ -9,7 +9,7 @@ def xml_parse_url(url):
   we recover the data on the xlm url adding the
   result in list
 
-  :return: dict with values total, free , status of 
+  :return: dict with values total, free , status of
   all parkings.
   :rtype: dict
 

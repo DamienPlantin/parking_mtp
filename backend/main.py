@@ -1,19 +1,19 @@
 # main.py
 from datetime import datetime
-from flask import Blueprint, render_template
+from flask import Blueprint
 from jinja2 import Template
 from apscheduler.schedulers.background import BackgroundScheduler
 from backend.database.db_mongo import result_database, connect_db, main_db
 from backend.database.db_mongo import HOST, PASSWORD, SERVER
 
 
-MAIN = Blueprint('main', __name__)
+MAIN = Blueprint("main", __name__)
 SCHED = BackgroundScheduler(daemon=True)
 SCHED.start()
-SCHED.add_job(main_db, 'interval', seconds=59)
+SCHED.add_job(main_db, "interval", seconds=59)
 
 
-@MAIN.route('/')
+@MAIN.route("/")
 def parking():
   """This function return parkings in jinja2 in the front
   :returns: list of parkings in parking.html

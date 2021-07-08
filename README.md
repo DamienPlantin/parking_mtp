@@ -1,4 +1,4 @@
-# data_parking_montpellier
+# Parking Montpellier
 
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -21,11 +21,10 @@
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![pull-request][pull-request-shield]][pull-request-url]
+[![LS][LS-shield]][LS-url]
 [![LinkedIn][linkedin-shield1]][linkedin-url1]
 [![LinkedIn][linkedin-shield2]][linkedin-url2]
-[![LinkedIn][linkedin-shield3]][linkedin-url3]
-<!-- [![CI][CI-shield]][CI-url] -->
-[![LS][LS-shield]][LS-url]
+[![Python application](https://github.com/Mancid/parking_mtp/actions/workflows/python_app.yml/badge.svg?branch=main)](https://github.com/Mancid/parking_mtp/actions/workflows/python_app.yml)
 
 
 
@@ -34,18 +33,25 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Mancid/data_parking_montpellier">
-    <img src="images/parking.jpg" alt="Logo" width="432" height="240">
+  <a href="https://github.com/Mancid/">
+    <img src="images/mancid.png" alt="Logo" width="432" height="432">
   </a>
-    <a href="https://github.com/Mancid/data_parking_montpellier">
+  <h2 align="center">MANCID Project present</h3>
+<br />
+</p>
+<p align="center">
+  <a href="https://github.com/Mancid/parking_mtp">
+    <img src="images/parking-3.png" alt="Logo" width="240" height="240">
+  </a>
+    <a href="https://github.com/Mancid/parking_mtp">
     <img src="images/mtp.jpg" alt="Logo" width="319" height="240">
   </a>
-  <h3 align="center">DATA PARKING MONTPELLIER</h3>
+  <h3 align="center">PARKING MONTPELLIER</h3>
 
   <p align="center">
     Visualisation en temps réel des places disponibles des parkings souterrains de Montpellier
     <br />
-    <a href="https://github.com/Mancid/data_parking_montpellier"><strong>Explore the docs »</strong></a>
+    <a href="https://mancid.github.io/parking_mtp/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
   </p>
@@ -83,20 +89,40 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+<br />
+<!-- [![Product Name Screen Shot][product-screenshot]](https://mancid.herokuapp.com/) -->
+<p align="center">
+<a href="https://mancid.herokuapp.com/">&emsp;
+<img src="images/screen.png" alt="image" width="889" height="500">
+</a>
+</p>
+<br />
 
 Ce projet permet de récupérer sur le site [OPENDATA de Montpellier Méditerranée Métropole](https://data.montpellier3m.fr/dataset/disponibilite-des-places-dans-les-parkings-de-montpellier-mediterranee-metropole) les données en format .xml sur la disponibilité des places de parking
 
 ### Built With
 
 Voici les frameworks utilisés pour ce projet :
-
-* [Python 3.6.8](https://www.python.org/)
-* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-* [SQLite](https://www.sqlite.org/index.html)
-* [Heroku](https://www.heroku.com)
-
-
+<p align="center">
+<br />
+<a href="https://www.python.org/">&emsp;
+<img src="images/python.png" alt="image" width="65" height="65">
+</a>
+<a href="https://flask.palletsprojects.com/en/1.1.x/">&emsp; &emsp;
+<img src="images/flask.png" alt="Logo" width="87" height="65">
+</a>
+<a href="https://www.mongodb.com/fr-fr">&emsp; &emsp;
+<img src="images/mongodb.png" alt="Logo" width="63" height="65">
+</a>
+<a href="https://www.docker.com/">&emsp; &emsp;
+<img src="images/docker.png" alt="Logo" width="76" height="65">
+</a>
+<a href="https://www.heroku.com">&emsp; &emsp;
+<img src="images/heroku.png" alt="Logo" width="195" height="65">
+</a>
+<br />
+<br />
+</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -106,13 +132,10 @@ Pour mettre en place une copie locale et la faire fonctionner, suivez les étape
 ### Prerequisites
 
 Liste des logiciels et librairies nécessaires et leurs installtions :  
-* Python
+* Python + pip + virtualenv
+
   ```sh
-  $ sudo apt-get install python 3.6.8 
-  ```
-* Virtualenv
-  ```sh
-  $ pip install virtualenv
+  $ sudo apt-get install python3 python3-pip python3-virtualenv
   ```
 
 ### Installation
@@ -120,19 +143,19 @@ Liste des logiciels et librairies nécessaires et leurs installtions :
 
 1. Clone the repo
    ```sh
-   $ git clone https://github.com/Mancid/data_parking_montpellier.git
+   $ git clone https://github.com/Mancid/parking_mtp.git
    ```
 2. Se placer dans le dossier du repo
    ```sh
-   $ cd data_parking_montpellier
+   $ cd parking_mtp
    ```
 3. Install Python packages
    ```sh
    $ python -m virtualenv .venv
    ```
-4. Se placer dans un environnement virtuel
+4. Activer l'environnement virtuel
    ```sh
-   $ . ./.venv/bin/activate
+   $ source ./.venv/bin/activate
    ```
 5. Install Python packages
    ```sh
@@ -157,7 +180,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/Mancid/data_parking_montpellier/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Mancid/parking_mtp/issues) for a list of proposed features (and known issues).
 
 
 
@@ -184,14 +207,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Contributors - [@DamienPlantin](https://github.com/DamienPlantin) - [@Nico34000](https://github.com/Nico34000) - [@SarahTruffert](https://github.com/SarahTruffert)
+Contributors - [@DamienPlantin](https://github.com/DamienPlantin) - [@Nico34000](https://github.com/Nico34000)
 
-Project Link: [https://github.com/Mancid/data_parking_montpellier](https://github.com/Mancid/data_parking_montpellier)
+Project Link: [https://github.com/Mancid/parking_mtp](https://github.com/Mancid/parking_mtp)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
-<!-- ## Acknowledgements
+## Acknowledgements
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
@@ -202,7 +225,7 @@ Project Link: [https://github.com/Mancid/data_parking_montpellier](https://githu
 * [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
 * [Sticky Kit](http://leafo.net/sticky-kit)
 * [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com) -->
+* [Font Awesome](https://fontawesome.com)
 
 
 
@@ -210,22 +233,20 @@ Project Link: [https://github.com/Mancid/data_parking_montpellier](https://githu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Mancid/data_parking_montpellier.svg?style=for-the-badge
-[contributors-url]: https://github.com/Mancid/data_parking_montpellier/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Mancid/data_parking_montpellier.svg?style=for-the-badge
-[forks-url]: https://github.com/Mancid/data_parking_montpellier/network/members
-[issues-shield]: https://img.shields.io/github/issues/Mancid/data_parking_montpellier.svg?style=for-the-badge
-[issues-url]: https://github.com/Mancid/data_parking_montpellier/issues
-[pull-request-shield]: https://img.shields.io/github/issues-pr/Mancid/data_parking_montpellier?style=for-the-badge
-[pull-request-url]: https://github.com/Mancid/data_parking_montpellier/pulls
-[linkedin-shield1]: https://img.shields.io/badge/-LinkedIn_Damien_Plantin-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-shield2]: https://img.shields.io/badge/-LinkedIn_Nicolas_Prodhomme-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-shield3]: https://img.shields.io/badge/-LinkedIn_SARAH_TRUFFERT-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[contributors-shield]: https://img.shields.io/github/contributors/Mancid/parking_mtp
+[contributors-url]: https://github.com/Mancid/parking_mtp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Mancid/parking_mtp
+[forks-url]: https://github.com/Mancid/parking_mtp/network/members
+[issues-shield]: https://img.shields.io/github/issues/Mancid/parking_mtp
+[issues-url]: https://github.com/Mancid/parking_mtp/issues
+[pull-request-shield]: https://img.shields.io/github/issues-pr/Mancid/parking_mtp
+[pull-request-url]: https://github.com/Mancid/parking_mtp/pulls
+[linkedin-shield1]: https://img.shields.io/badge/-LinkedIn_Damien_Plantin-black&logo=linkedin&colorB=555
+[linkedin-shield2]: https://img.shields.io/badge/-LinkedIn_Nicolas_Prodhomme-black&logo=linkedin&colorB=555
 [linkedin-url1]: https://www.linkedin.com/in/damienplantin/
 [linkedin-url2]: https://www.linkedin.com/in/nicolas-prodhomme-5578aa201/
-[linkedin-url3]: https://www.linkedin.com/in/sarah-truffert/
-[product-screenshot]: images/screenshot.png
-<!-- [CI-shield]:https://img.shields.io/travis/com/mancid/data_parking_montpellier?style=for-the-badge
-[CI-url]:https://github.com/Mancid/data_parking_montpellier/actions -->
-[LS-shield]:https://img.shields.io/github/last-commit/Mancid/data_parking_montpellier?style=for-the-badge
-[LS-url]:https://github.com/Mancid/data_parking_montpellier/commits/main
+[product-screenshot]: images/screen.png
+<!-- [CI-shield]:https://img.shields.io/travis/com/mancid/parking_mtp?style=for-the-badge
+[CI-url]:https://github.com/Mancid/parking_mtp/actions -->
+[LS-shield]:https://img.shields.io/github/last-commit/Mancid/parking_mtp
+[LS-url]:https://github.com/Mancid/parking_mtp/commits/main
