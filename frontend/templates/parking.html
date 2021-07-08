@@ -8,37 +8,33 @@
   <link rel="stylesheet" href="./static/bootstrap.min.css" />
   <link rel="stylesheet" type= "text/css" href= './static/style.css'/>
   <title>Parking Montpellier</title>
- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarColor03">
-      <ul class="navbar-nav me-auto">
-          <a class="nav-link" href="https://github.com/mancid/parking_mtp.git/" target="_blank"><img id="github" src="./static/github.png"></img></a>
+
+          <a class="nav-link" href="https://github.com/mancid/parking_mtp.git/" target="_blank"><img id="github" src="./static/github.png"></img>
           <a class="nav-link" href="https://mancid.github.io/data_parking_montpellier_login/" target="_blank"><img id="sphinx" src="./static/sphinxheader.png"></img></a>
 
-          </nav>
 </head>
 
 <body>
   <div class="jumbotron">
     <div class="logo" style="display: block; text-align: left;">
-    <img id="logo" src="./static/logo.png"></div>
-    <p class="lead">Nombres de places disponibles en temps réel des parkings souterrains de Montpellier</p>
-    <hr class="my-4">
-        <p class="secondary">Cliquez sur Google Maps pour avoir directement l'itinéraire vers le parking choisi.</p></div>
-    <div>
+    <img id="logo" src="./static/logo.png">
+    <p class="lead">Nombres de places disponibles en temps réel des parkings souterrains de Montpellier</p></div>
+    
     <span class="badge bg-primary rounded-pill">Actualis&eacute; &agrave; : {{now}}</span></div>
    {% for parking, value in parkings.items() %}
    
    <ul class="list-group">
-    <li id="name_parking" class="list-group-item d-flex justify-content-between align-items-center"><h1>
+    <li id="name_parking" class="list-group-item d-flex justify-content-between align-items-center"><h3>
       {{ parking.replace( '_', ' ')}}
-    </h1>
+    </h3>
+
+    <span id="free_place" class="badge bg-primary rounded-pill">Dispo : {{value[0].get('Free')}}</span>
     <div class="progress">
 <div class="progress-bar bg-success" role="progressbar" style="width:{{(value[0].get('Total') - value[0].get('Free'))/value[0].get('Total') * 100}}%;" aria-valuenow={{value[0].get('Free')}} aria-valuemin="0" aria-valuemax={{value[0].get('Total')}}></div>
     </div>
-      <span id="free_place" class="badge bg-primary rounded-pill">{{value[0].get('Free')}}</span>
-  <a href="https://www.google.com/maps/dir//{{value[1].replace(' ', '+')}})" target="_blank"><img id="google-maps"  src="./static/google_maps.png"></a></div>
-</span></li>
+    <a href="https://www.google.com/maps/dir//{{value[1].replace(' ', '+')}})" target="_blank"><img id="google-maps"  src="./static/google_maps.png"></a></div>
+  </span>
+ </li>
  {% endfor %}
 </body>
 <footer>        
